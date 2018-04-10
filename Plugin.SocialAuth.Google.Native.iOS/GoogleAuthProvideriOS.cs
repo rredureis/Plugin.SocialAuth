@@ -25,7 +25,7 @@ namespace Plugin.SocialAuth.Google.Native.iOS
 		{
 			NSError configureError;
 
-			Firebase.Analytics.App.Configure();
+			Firebase.Core.App.Configure();
 
 			Context.SharedInstance.Configure(out configureError);
 
