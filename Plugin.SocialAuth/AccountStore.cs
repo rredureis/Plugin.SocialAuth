@@ -58,7 +58,10 @@ namespace Plugin.SocialAuth
 			if (!string.IsNullOrEmpty(serialized))
 				accounts = JsonSerializer.Deserialize<List<IAccount>>(serialized);
 
-			if (account != null && !string.IsNullOrEmpty(account.Id))
+            if(accounts == null)
+                accounts = new List<IAccount>();
+
+            if (account != null && !string.IsNullOrEmpty(account.Id))
 				accounts.RemoveAll(a => a.Any(kvp => kvp.Key == "id" && kvp.Value == account.Id));
 
 			accounts.Add(account);

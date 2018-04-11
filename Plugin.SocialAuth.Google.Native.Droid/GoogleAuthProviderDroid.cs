@@ -124,7 +124,7 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 
 			public async Task<GoogleSignInResult> Authenticate(IGoogleAuthOptions options)
 			{
-				var googleScopes = options?.Scopes?.Select(s => new Scope(s))?.ToArray();
+                var googleScopes = options?.Scopes?.Select(s => new Scope(s))?.ToArray();
 
 				var gsoBuilder = new GoogleSignInOptions.Builder(GoogleSignInOptions.DefaultSignIn);
 
