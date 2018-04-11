@@ -14,7 +14,7 @@ using Plugin.SocialAuth.Droid;
 
 namespace Plugin.SocialAuth.Google.Native.Droid
 {
-	public class GoogleAuthProvider : IAuthProviderDroidWithOnActivityResult<IAccount, IGoogleAuthOptions>
+	public class GoogleAuthProvider : IAuthProviderDroidWithOnActivityResult<IGoogleAccount, IGoogleAuthOptions>
 	{
 		public void OnActivityResult(int requestCode, Result result, Intent data)
 		{
@@ -29,7 +29,7 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 
 		static GoogleSignInProvider googleSignInProvider;
 
-		public async Task<IAccount> AuthenticateAsync(IGoogleAuthOptions options)
+		public async Task<IGoogleAccount> AuthenticateAsync(IGoogleAuthOptions options)
 		{
 			googleSignInProvider = new GoogleSignInProvider();
 

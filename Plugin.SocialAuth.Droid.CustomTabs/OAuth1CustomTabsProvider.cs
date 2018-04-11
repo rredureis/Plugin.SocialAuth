@@ -74,9 +74,13 @@ namespace Plugin.SocialAuth.Droid.CustomTabs
 				}
 
 			};
-			authSession.CustomTabsActivityManager.CustomTabsServiceConnected += delegate
+
+            authSession.CustomTabsActivityManager.CustomTabsServiceConnected += delegate
 			{
-				var builder = new CustomTabsIntent.Builder(authSession.CustomTabsActivityManager.Session)
+                var ctam = authSession.CustomTabsActivityManager;
+                var ses = ctam.Session;
+
+                var builder = new CustomTabsIntent.Builder(ses)
 												  .SetShowTitle(true);
 
 				var customTabsIntent = builder.Build();
