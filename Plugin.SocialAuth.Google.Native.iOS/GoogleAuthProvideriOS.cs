@@ -60,20 +60,30 @@ namespace Plugin.SocialAuth.Google.Native.iOS
 			// First try silently
 			try
 			{
-				SignIn.SharedInstance.SignInUserSilently();
+                if (SignIn.SharedInstance.HasAuthInKeychain)
+                {
+                    SignIn.SharedInstance.SignInUserSilently();
 
-				user = await tcsSignin.Task;
+                    user = await tcsSignin.Task;
+                }
+                else
+                {
+                    SignIn.SharedInstance.SignInUser();
+                    user = await tcsSignin.Task;
+                }
 			}
-			catch
+			catch(Exception ex)
 			{
+                Console.WriteLine("Exception: " + ex.Message);
+                Console.WriteLine("Call Stack: " + ex.StackTrace);
 
-				// If silent failed, try the normal sign in
-				tcsSignin = new TaskCompletionSource<GoogleUser>();
+                // If silent failed, try the normal sign in
+                tcsSignin = new TaskCompletionSource<GoogleUser>();
 
 				SignIn.SharedInstance.SignInUser();
 
-				user = await tcsSignin.Task;
-			}
+                user = await tcsSignin.Task;
+            }
 
 			if (user == null || user.Authentication == null)
 				return null;

@@ -135,6 +135,7 @@ namespace Plugin.SocialAuth.iOS
 					Service = FILENAME,
 					Label = key,
 					ValueData = NSData.FromString(value, NSStringEncoding.UTF8),
+                    Accessible = SecAccessible.Always
 				};
 			}
 
