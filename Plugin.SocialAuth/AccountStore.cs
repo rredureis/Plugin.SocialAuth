@@ -55,11 +55,14 @@ namespace Plugin.SocialAuth
 			var accounts = new List<IAccount>();
 
 			var serialized = SecureStore?[providerTypeId];
-			if (!string.IsNullOrEmpty(serialized))
-				accounts = JsonSerializer.Deserialize<List<IAccount>>(serialized);
 
-            if(accounts == null)
-                accounts = new List<IAccount>();
+            List<IAccount> tempaccounts = null;
+
+            if (!string.IsNullOrEmpty(serialized))
+                tempaccounts = JsonSerializer.Deserialize<List<IAccount>>(serialized,true,true);
+
+            if(tempaccounts != null)
+                accounts = tempaccounts;
 
             if (account != null && !string.IsNullOrEmpty(account.Id))
 				accounts.RemoveAll(a => a.Any(kvp => kvp.Key == "id" && kvp.Value == account.Id));
@@ -73,7 +76,7 @@ namespace Plugin.SocialAuth
 
 		public void DeleteAccount(string providerTypeId, string id)
 		{
-			var accounts = JsonSerializer.Deserialize<List<IAccount>>(SecureStore?[providerTypeId]);
+			var accounts = JsonSerializer.Deserialize<List<IAccount>>(SecureStore?[providerTypeId],true,true);
 
 			accounts.RemoveAll(a => a.Id == id);
 

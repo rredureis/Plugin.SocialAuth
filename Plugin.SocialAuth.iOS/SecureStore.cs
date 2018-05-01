@@ -60,7 +60,7 @@ namespace Plugin.SocialAuth.iOS
 				var kc = new KeyChain();
 				var serialized = kc.ValueForKey(PREFERENCES_KEY);
 
-				return JsonSerializer.Deserialize<Dictionary<string, string>>(serialized);
+				return JsonSerializer.Deserialize<Dictionary<string, string>>(serialized,false,true);
 
 			}
 			catch

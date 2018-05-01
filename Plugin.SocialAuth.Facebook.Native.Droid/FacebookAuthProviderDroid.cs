@@ -24,25 +24,27 @@ namespace Plugin.SocialAuth.Facebook.Native.Droid
 
 		public async Task<IFacebookAccount> AuthenticateAsync(IFacebookAuthOptions options)
 		{
-			// Check if we have a cached login already that's still good
-			var currentAccessToken = AccessToken.CurrentAccessToken;
-			if (currentAccessToken != null && (currentAccessToken.Expires == null || ToManagedDateTime(currentAccessToken.Expires) > DateTime.UtcNow))
-			{
-				// If we also have a profile, we have enough information to return a good account
-				// without actuall doing the sign in flow
-				var currentProfile = Profile.CurrentProfile;
-				if (currentProfile != null)
-					return populateAccount(currentAccessToken, currentProfile, options.RequestedPhotoSize);
-			}
+            LoginManager.Instance.LogOut();
 
-			var activity = Plugin.SocialAuth.Droid.SocialAuth.CurrentActivity;
+            //Check if we have a cached login already that's still good
+
+            var currentAccessToken = AccessToken.CurrentAccessToken;
+            if (currentAccessToken != null && (currentAccessToken.Expires == null || ToManagedDateTime(currentAccessToken.Expires) > DateTime.UtcNow))
+            {
+                // If we also have a profile, we have enough information to return a good account
+                // without actuall doing the sign in flow
+                var currentProfile = Profile.CurrentProfile;
+                if (currentProfile != null)
+                    return populateAccount(currentAccessToken, currentProfile, options.RequestedPhotoSize);
+            }
+
+            var activity = Plugin.SocialAuth.Droid.SocialAuth.CurrentActivity;
 
 			callbackManager = CallbackManagerFactory.Create();
 			var loginManager = LoginManager.Instance;
 			var fbHandler = new FbCallbackHandler();
 
 			loginManager.RegisterCallback(callbackManager, fbHandler);
-
 
 			fbHandler.Reset();
 

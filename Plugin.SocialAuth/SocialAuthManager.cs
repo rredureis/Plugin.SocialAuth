@@ -110,7 +110,7 @@ namespace Plugin.SocialAuth
 			if (!string.IsNullOrEmpty(accountId))
 				account.Id = accountId;
 
-			if (!string.IsNullOrEmpty(accountId ?? account.Id))
+			if (account!= null && !string.IsNullOrEmpty(accountId ?? account.Id))
 				AccountStore.SaveAccount(providerTypeId, account);
 
 			return (TAccount)account;

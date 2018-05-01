@@ -18,12 +18,13 @@ namespace Plugin.SocialAuth.Droid
 
 		public void OnActivityDestroyed(Activity activity)
 		{
-			CurrentActivity = null;
+			//CurrentActivity = null;
 		}
 
 		public void OnActivityPaused(Activity activity)
 		{
-		}
+            CurrentActivity = activity as FragmentActivity;
+        }
 
 		public void OnActivityResumed(Activity activity)
 		{
@@ -32,7 +33,8 @@ namespace Plugin.SocialAuth.Droid
 
 		public void OnActivitySaveInstanceState(Activity activity, Bundle outState)
 		{
-		}
+            CurrentActivity = activity as FragmentActivity;
+        }
 
 		public void OnActivityStarted(Activity activity)
 		{
@@ -41,6 +43,7 @@ namespace Plugin.SocialAuth.Droid
 
 		public void OnActivityStopped(Activity activity)
 		{
-		}
+            CurrentActivity = activity as FragmentActivity;
+        }
 	}
 }
