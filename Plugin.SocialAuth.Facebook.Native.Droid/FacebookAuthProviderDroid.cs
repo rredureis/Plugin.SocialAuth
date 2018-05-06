@@ -24,7 +24,7 @@ namespace Plugin.SocialAuth.Facebook.Native.Droid
 
 		public async Task<IFacebookAccount> AuthenticateAsync(IFacebookAuthOptions options)
 		{
-            LoginManager.Instance.LogOut();
+            await LogoutAsync();
 
             //Check if we have a cached login already that's still good
 

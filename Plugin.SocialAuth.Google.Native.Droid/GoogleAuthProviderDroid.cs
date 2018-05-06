@@ -31,7 +31,9 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 
 		public async Task<IGoogleAccount> AuthenticateAsync(IGoogleAuthOptions options)
 		{
-			googleSignInProvider = new GoogleSignInProvider();
+            await LogoutAsync();
+
+            googleSignInProvider = new GoogleSignInProvider();
 
 			GoogleSignInResult result = null;
 
@@ -48,7 +50,7 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 
 			var acct = result.SignInAccount;
 
-			var grantedScopes = new List<string>();
+            var grantedScopes = new List<string>();
 			if (acct.GrantedScopes != null && acct.GrantedScopes.Any())
 				grantedScopes.AddRange(acct.GrantedScopes.Select(s => s.ToString()));
 
@@ -59,11 +61,15 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 
 			// Try and obtain an access token
 			var activity = Plugin.SocialAuth.Droid.SocialAuth.CurrentActivity;
-			var androidAccount = Android.Accounts.AccountManager.FromContext(activity)
+
+            var androidAccount = Android.Accounts.AccountManager.FromContext(activity)
 										?.GetAccounts()
 										?.FirstOrDefault(a => a.Name?.Equals(result?.SignInAccount?.Email, StringComparison.InvariantCultureIgnoreCase) ?? false);
 
-			var tokenScopes = options.Scopes.Select(s => "oauth2:" + s);
+            if (androidAccount == null)
+                androidAccount = acct.Account;
+
+            var tokenScopes = options.Scopes.Select(s => "oauth2:" + s);
 
 			string accessToken = null;
 			DateTime? accessTokenExpires = null;

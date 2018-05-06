@@ -422,14 +422,8 @@ namespace Plugin.SocialAuth.Droid.CustomTabs
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070002
-			public static int ApplicationName = 2131165186;
-			
 			// aapt resource value: 0x7f070001
-			public static int Hello = 2131165185;
-			
-			// aapt resource value: 0x7f070003
-			public static int library_name = 2131165187;
+			public static int library_name = 2131165185;
 			
 			// aapt resource value: 0x7f070000
 			public static int status_bar_notification_info_overflow = 2131165184;

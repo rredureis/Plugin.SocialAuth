@@ -51,7 +51,9 @@ namespace Plugin.SocialAuth.Google.Native.iOS
 
 		public async Task<IGoogleAccount> AuthenticateAsync(IGoogleAuthOptions options)
 		{
-			tcsSignin = new TaskCompletionSource<GoogleUser>();
+            await LogoutAsync();
+
+            tcsSignin = new TaskCompletionSource<GoogleUser>();
 
 			SetSignInOptions(options);
 

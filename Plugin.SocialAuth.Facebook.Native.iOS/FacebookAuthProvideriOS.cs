@@ -26,7 +26,9 @@ namespace Plugin.SocialAuth.Facebook.Native.iOS
 
 		public async Task<IFacebookAccount> AuthenticateAsync(IFacebookAuthOptions options)
 		{
-			var currentAccessToken = global::Facebook.CoreKit.AccessToken.CurrentAccessToken;
+            await LogoutAsync();
+
+            var currentAccessToken = global::Facebook.CoreKit.AccessToken.CurrentAccessToken;
 
 			if (currentAccessToken != null
 				&& (currentAccessToken.ExpirationDate == null || ((DateTime)currentAccessToken.ExpirationDate).ToUniversalTime() > DateTime.UtcNow))
