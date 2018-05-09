@@ -40,7 +40,8 @@ namespace Plugin.SocialAuth.Facebook.Native.Droid
 
             var activity = Plugin.SocialAuth.Droid.SocialAuth.CurrentActivity;
 
-			callbackManager = CallbackManagerFactory.Create();
+            if (callbackManager == null)
+                callbackManager = CallbackManagerFactory.Create();
 			var loginManager = LoginManager.Instance;
 			var fbHandler = new FbCallbackHandler();
 
@@ -57,8 +58,8 @@ namespace Plugin.SocialAuth.Facebook.Native.Droid
 
 			try
 			{
-				result = await fbHandler.Task;
-			}
+                result = await fbHandler.Task;
+            }
 			catch (Exception ex)
 			{
 				throw ex;
