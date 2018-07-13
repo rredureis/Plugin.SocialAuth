@@ -104,7 +104,7 @@ namespace Plugin.SocialAuth.Facebook.Native.iOS
 			}
 
 			Uri linkUri = null;
-			if (profile?.LinkUrl != null)
+			if (profile?.LinkUrl != null && !string.IsNullOrWhiteSpace(profile.LinkUrl.AbsoluteString))
 				linkUri = new Uri(profile.LinkUrl.AbsoluteString, UriKind.Absolute);
 
 			return new FacebookAccount

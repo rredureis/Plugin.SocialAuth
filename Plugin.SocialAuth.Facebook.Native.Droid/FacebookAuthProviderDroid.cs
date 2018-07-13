@@ -94,7 +94,7 @@ namespace Plugin.SocialAuth.Facebook.Native.Droid
 			//	lastRefresh = ToManagedDateTime (accessToken.LastRefresh);
 
 			Uri linkUri = null;
-			if (profile?.LinkUri != null)
+			if (profile?.LinkUri != null && !string.IsNullOrWhiteSpace(profile.LinkUri.ToString()))
 				linkUri = new Uri(profile.LinkUri.ToString(), UriKind.Absolute);
 
 			Uri photoUri = null;

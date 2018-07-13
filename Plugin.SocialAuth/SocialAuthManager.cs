@@ -187,7 +187,12 @@ namespace Plugin.SocialAuth
 				authProviders.Remove(providerTypeId);
 		}
 
-		public Type GetRegisteredProvider(string providerTypeId)
+        public Type GetRegisteredProvider(ProviderType providerType)
+        {
+            return GetRegisteredProvider(GetProviderTypeId(providerType));
+        }
+
+        public Type GetRegisteredProvider(string providerTypeId)
 		{
 			if (!authProviders.ContainsKey(providerTypeId))
 				return null;
