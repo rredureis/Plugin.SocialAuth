@@ -11,7 +11,7 @@ namespace Plugin.SocialAuth.Facebook.Native.iOS
 	{
 		public static void Init(string facebookAppId)
 		{
-			global::Facebook.CoreKit.Settings.AppID = facebookAppId;
+			global::Facebook.CoreKit.Settings.AppId = facebookAppId;
 		}
 
 		public bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
@@ -109,9 +109,9 @@ namespace Plugin.SocialAuth.Facebook.Native.iOS
 
 			return new FacebookAccount
 			{
-				Id = profile?.UserID ?? accessToken.UserID,
-				ApplicationId = accessToken.AppID,
-				UserId = profile?.UserID ?? accessToken.UserID,
+				Id = profile?.UserId ?? accessToken.UserId,
+				ApplicationId = accessToken.AppId,
+				UserId = profile?.UserId ?? accessToken.UserId,
 				AccessToken = accessToken.TokenString,
 				AccessTokenExpires = expires,
 				Permissions = permissions,
