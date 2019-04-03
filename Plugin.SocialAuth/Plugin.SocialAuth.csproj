@@ -72,7 +72,7 @@
       <HintPath>..\..\SRPG\SRPG\packages\PInvoke.Windows.Core.0.5.184\lib\portable-net45+win8+wpa81\PInvoke.Windows.Core.dll</HintPath>
     </Reference>
     <Reference Include="Validation, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
-      <HintPath>..\..\SRPG\SRPG\packages\Validation.2.4.18\lib\portable-net45+win8+wp8+wpa81\Validation.dll</HintPath>
+      <HintPath>..\..\SRPG\SRPG\packages\Validation.2.4.22\lib\portable-net45+win8+wp8+wpa81\Validation.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
