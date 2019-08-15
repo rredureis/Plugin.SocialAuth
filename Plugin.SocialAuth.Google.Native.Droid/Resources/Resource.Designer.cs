@@ -36,32 +36,35 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 			// aapt resource value: 0x7f010004
 			public static int colorScheme = 2130771972;
 			
-			// aapt resource value: 0x7f01000d
-			public static int font = 2130771981;
-			
 			// aapt resource value: 0x7f010006
-			public static int fontProviderAuthority = 2130771974;
+			public static int coordinatorLayoutStyle = 2130771974;
 			
-			// aapt resource value: 0x7f010009
-			public static int fontProviderCerts = 2130771977;
+			// aapt resource value: 0x7f010016
+			public static int font = 2130771990;
 			
-			// aapt resource value: 0x7f01000a
-			public static int fontProviderFetchStrategy = 2130771978;
+			// aapt resource value: 0x7f01000f
+			public static int fontProviderAuthority = 2130771983;
 			
-			// aapt resource value: 0x7f01000b
-			public static int fontProviderFetchTimeout = 2130771979;
+			// aapt resource value: 0x7f010012
+			public static int fontProviderCerts = 2130771986;
 			
-			// aapt resource value: 0x7f010007
-			public static int fontProviderPackage = 2130771975;
+			// aapt resource value: 0x7f010013
+			public static int fontProviderFetchStrategy = 2130771987;
 			
-			// aapt resource value: 0x7f010008
-			public static int fontProviderQuery = 2130771976;
+			// aapt resource value: 0x7f010014
+			public static int fontProviderFetchTimeout = 2130771988;
 			
-			// aapt resource value: 0x7f01000c
-			public static int fontStyle = 2130771980;
+			// aapt resource value: 0x7f010010
+			public static int fontProviderPackage = 2130771984;
 			
-			// aapt resource value: 0x7f01000e
-			public static int fontWeight = 2130771982;
+			// aapt resource value: 0x7f010011
+			public static int fontProviderQuery = 2130771985;
+			
+			// aapt resource value: 0x7f010015
+			public static int fontStyle = 2130771989;
+			
+			// aapt resource value: 0x7f010017
+			public static int fontWeight = 2130771991;
 			
 			// aapt resource value: 0x7f010001
 			public static int imageAspectRatio = 2130771969;
@@ -69,8 +72,32 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 			// aapt resource value: 0x7f010000
 			public static int imageAspectRatioAdjust = 2130771968;
 			
+			// aapt resource value: 0x7f010007
+			public static int keylines = 2130771975;
+			
+			// aapt resource value: 0x7f01000a
+			public static int layout_anchor = 2130771978;
+			
+			// aapt resource value: 0x7f01000c
+			public static int layout_anchorGravity = 2130771980;
+			
+			// aapt resource value: 0x7f010009
+			public static int layout_behavior = 2130771977;
+			
+			// aapt resource value: 0x7f01000e
+			public static int layout_dodgeInsetEdges = 2130771982;
+			
+			// aapt resource value: 0x7f01000d
+			public static int layout_insetEdge = 2130771981;
+			
+			// aapt resource value: 0x7f01000b
+			public static int layout_keyline = 2130771979;
+			
 			// aapt resource value: 0x7f010005
 			public static int scopeUris = 2130771973;
+			
+			// aapt resource value: 0x7f010008
+			public static int statusBarBackground = 2130771976;
 			
 			static Attribute()
 			{
@@ -353,23 +380,23 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0a0017
-			public static int action0 = 2131361815;
+			// aapt resource value: 0x7f0a0026
+			public static int action0 = 2131361830;
 			
-			// aapt resource value: 0x7f0a0014
-			public static int action_container = 2131361812;
+			// aapt resource value: 0x7f0a0023
+			public static int action_container = 2131361827;
 			
-			// aapt resource value: 0x7f0a001b
-			public static int action_divider = 2131361819;
+			// aapt resource value: 0x7f0a002a
+			public static int action_divider = 2131361834;
 			
-			// aapt resource value: 0x7f0a0015
-			public static int action_image = 2131361813;
-			
-			// aapt resource value: 0x7f0a0016
-			public static int action_text = 2131361814;
+			// aapt resource value: 0x7f0a0024
+			public static int action_image = 2131361828;
 			
 			// aapt resource value: 0x7f0a0025
-			public static int actions = 2131361829;
+			public static int action_text = 2131361829;
+			
+			// aapt resource value: 0x7f0a0034
+			public static int actions = 2131361844;
 			
 			// aapt resource value: 0x7f0a0006
 			public static int adjust_height = 2131361798;
@@ -377,44 +404,80 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 			// aapt resource value: 0x7f0a0007
 			public static int adjust_width = 2131361799;
 			
-			// aapt resource value: 0x7f0a000f
-			public static int async = 2131361807;
+			// aapt resource value: 0x7f0a001d
+			public static int all = 2131361821;
+			
+			// aapt resource value: 0x7f0a001e
+			public static int async = 2131361822;
 			
 			// aapt resource value: 0x7f0a000c
 			public static int auto = 2131361804;
 			
+			// aapt resource value: 0x7f0a001f
+			public static int blocking = 2131361823;
+			
+			// aapt resource value: 0x7f0a000f
+			public static int bottom = 2131361807;
+			
+			// aapt resource value: 0x7f0a0027
+			public static int cancel_action = 2131361831;
+			
 			// aapt resource value: 0x7f0a0010
-			public static int blocking = 2131361808;
+			public static int center = 2131361808;
 			
-			// aapt resource value: 0x7f0a0018
-			public static int cancel_action = 2131361816;
+			// aapt resource value: 0x7f0a0011
+			public static int center_horizontal = 2131361809;
 			
-			// aapt resource value: 0x7f0a0020
-			public static int chronometer = 2131361824;
+			// aapt resource value: 0x7f0a0012
+			public static int center_vertical = 2131361810;
+			
+			// aapt resource value: 0x7f0a002f
+			public static int chronometer = 2131361839;
+			
+			// aapt resource value: 0x7f0a0013
+			public static int clip_horizontal = 2131361811;
+			
+			// aapt resource value: 0x7f0a0014
+			public static int clip_vertical = 2131361812;
 			
 			// aapt resource value: 0x7f0a000d
 			public static int dark = 2131361805;
 			
-			// aapt resource value: 0x7f0a0027
-			public static int end_padder = 2131361831;
+			// aapt resource value: 0x7f0a0015
+			public static int end = 2131361813;
 			
-			// aapt resource value: 0x7f0a0011
-			public static int forever = 2131361809;
+			// aapt resource value: 0x7f0a0036
+			public static int end_padder = 2131361846;
 			
-			// aapt resource value: 0x7f0a0022
-			public static int icon = 2131361826;
+			// aapt resource value: 0x7f0a0016
+			public static int fill = 2131361814;
 			
-			// aapt resource value: 0x7f0a0026
-			public static int icon_group = 2131361830;
+			// aapt resource value: 0x7f0a0017
+			public static int fill_horizontal = 2131361815;
+			
+			// aapt resource value: 0x7f0a0018
+			public static int fill_vertical = 2131361816;
+			
+			// aapt resource value: 0x7f0a0020
+			public static int forever = 2131361824;
+			
+			// aapt resource value: 0x7f0a0031
+			public static int icon = 2131361841;
+			
+			// aapt resource value: 0x7f0a0035
+			public static int icon_group = 2131361845;
 			
 			// aapt resource value: 0x7f0a0009
 			public static int icon_only = 2131361801;
 			
-			// aapt resource value: 0x7f0a0021
-			public static int info = 2131361825;
+			// aapt resource value: 0x7f0a0030
+			public static int info = 2131361840;
 			
-			// aapt resource value: 0x7f0a0012
-			public static int italic = 2131361810;
+			// aapt resource value: 0x7f0a0021
+			public static int italic = 2131361825;
+			
+			// aapt resource value: 0x7f0a0019
+			public static int left = 2131361817;
 			
 			// aapt resource value: 0x7f0a000e
 			public static int light = 2131361806;
@@ -425,35 +488,41 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 			// aapt resource value: 0x7f0a0001
 			public static int line3 = 2131361793;
 			
-			// aapt resource value: 0x7f0a001a
-			public static int media_actions = 2131361818;
+			// aapt resource value: 0x7f0a0029
+			public static int media_actions = 2131361833;
 			
 			// aapt resource value: 0x7f0a0008
 			public static int none = 2131361800;
 			
-			// aapt resource value: 0x7f0a0013
-			public static int normal = 2131361811;
+			// aapt resource value: 0x7f0a0022
+			public static int normal = 2131361826;
 			
-			// aapt resource value: 0x7f0a0024
-			public static int notification_background = 2131361828;
+			// aapt resource value: 0x7f0a0033
+			public static int notification_background = 2131361843;
 			
-			// aapt resource value: 0x7f0a001d
-			public static int notification_main_column = 2131361821;
+			// aapt resource value: 0x7f0a002c
+			public static int notification_main_column = 2131361836;
 			
-			// aapt resource value: 0x7f0a001c
-			public static int notification_main_column_container = 2131361820;
+			// aapt resource value: 0x7f0a002b
+			public static int notification_main_column_container = 2131361835;
 			
-			// aapt resource value: 0x7f0a0023
-			public static int right_icon = 2131361827;
+			// aapt resource value: 0x7f0a001a
+			public static int right = 2131361818;
 			
-			// aapt resource value: 0x7f0a001e
-			public static int right_side = 2131361822;
+			// aapt resource value: 0x7f0a0032
+			public static int right_icon = 2131361842;
+			
+			// aapt resource value: 0x7f0a002d
+			public static int right_side = 2131361837;
 			
 			// aapt resource value: 0x7f0a000a
 			public static int standard = 2131361802;
 			
-			// aapt resource value: 0x7f0a0019
-			public static int status_bar_latest_event_content = 2131361817;
+			// aapt resource value: 0x7f0a001b
+			public static int start = 2131361819;
+			
+			// aapt resource value: 0x7f0a0028
+			public static int status_bar_latest_event_content = 2131361832;
 			
 			// aapt resource value: 0x7f0a0002
 			public static int tag_transition_group = 2131361794;
@@ -464,11 +533,14 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 			// aapt resource value: 0x7f0a0004
 			public static int text2 = 2131361796;
 			
-			// aapt resource value: 0x7f0a001f
-			public static int time = 2131361823;
+			// aapt resource value: 0x7f0a002e
+			public static int time = 2131361838;
 			
 			// aapt resource value: 0x7f0a0005
 			public static int title = 2131361797;
+			
+			// aapt resource value: 0x7f0a001c
+			public static int top = 2131361820;
 			
 			// aapt resource value: 0x7f0a000b
 			public static int wide = 2131361803;
@@ -566,11 +638,11 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050013
-			public static int ApplicationName = 2131034131;
+			// aapt resource value: 0x7f050014
+			public static int ApplicationName = 2131034132;
 			
-			// aapt resource value: 0x7f050012
-			public static int Hello = 2131034130;
+			// aapt resource value: 0x7f050013
+			public static int Hello = 2131034131;
 			
 			// aapt resource value: 0x7f050001
 			public static int common_google_play_services_enable_button = 2131034113;
@@ -591,40 +663,43 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 			public static int common_google_play_services_install_title = 2131034118;
 			
 			// aapt resource value: 0x7f050007
-			public static int common_google_play_services_notification_ticker = 2131034119;
+			public static int common_google_play_services_notification_channel_name = 2131034119;
+			
+			// aapt resource value: 0x7f050008
+			public static int common_google_play_services_notification_ticker = 2131034120;
 			
 			// aapt resource value: 0x7f050000
 			public static int common_google_play_services_unknown_issue = 2131034112;
 			
-			// aapt resource value: 0x7f050008
-			public static int common_google_play_services_unsupported_text = 2131034120;
-			
 			// aapt resource value: 0x7f050009
-			public static int common_google_play_services_update_button = 2131034121;
+			public static int common_google_play_services_unsupported_text = 2131034121;
 			
 			// aapt resource value: 0x7f05000a
-			public static int common_google_play_services_update_text = 2131034122;
+			public static int common_google_play_services_update_button = 2131034122;
 			
 			// aapt resource value: 0x7f05000b
-			public static int common_google_play_services_update_title = 2131034123;
+			public static int common_google_play_services_update_text = 2131034123;
 			
 			// aapt resource value: 0x7f05000c
-			public static int common_google_play_services_updating_text = 2131034124;
+			public static int common_google_play_services_update_title = 2131034124;
 			
 			// aapt resource value: 0x7f05000d
-			public static int common_google_play_services_wear_update_text = 2131034125;
+			public static int common_google_play_services_updating_text = 2131034125;
 			
 			// aapt resource value: 0x7f05000e
-			public static int common_open_on_phone = 2131034126;
+			public static int common_google_play_services_wear_update_text = 2131034126;
 			
 			// aapt resource value: 0x7f05000f
-			public static int common_signin_button_text = 2131034127;
+			public static int common_open_on_phone = 2131034127;
 			
 			// aapt resource value: 0x7f050010
-			public static int common_signin_button_text_long = 2131034128;
+			public static int common_signin_button_text = 2131034128;
 			
 			// aapt resource value: 0x7f050011
-			public static int status_bar_notification_info_overflow = 2131034129;
+			public static int common_signin_button_text_long = 2131034129;
+			
+			// aapt resource value: 0x7f050012
+			public static int status_bar_notification_info_overflow = 2131034130;
 			
 			static String()
 			{
@@ -639,17 +714,17 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f070005
-			public static int TextAppearance_Compat_Notification = 2131165189;
-			
 			// aapt resource value: 0x7f070006
-			public static int TextAppearance_Compat_Notification_Info = 2131165190;
+			public static int TextAppearance_Compat_Notification = 2131165190;
+			
+			// aapt resource value: 0x7f070007
+			public static int TextAppearance_Compat_Notification_Info = 2131165191;
 			
 			// aapt resource value: 0x7f070000
 			public static int TextAppearance_Compat_Notification_Info_Media = 2131165184;
 			
-			// aapt resource value: 0x7f07000b
-			public static int TextAppearance_Compat_Notification_Line2 = 2131165195;
+			// aapt resource value: 0x7f07000c
+			public static int TextAppearance_Compat_Notification_Line2 = 2131165196;
 			
 			// aapt resource value: 0x7f070004
 			public static int TextAppearance_Compat_Notification_Line2_Media = 2131165188;
@@ -657,23 +732,26 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 			// aapt resource value: 0x7f070001
 			public static int TextAppearance_Compat_Notification_Media = 2131165185;
 			
-			// aapt resource value: 0x7f070007
-			public static int TextAppearance_Compat_Notification_Time = 2131165191;
+			// aapt resource value: 0x7f070008
+			public static int TextAppearance_Compat_Notification_Time = 2131165192;
 			
 			// aapt resource value: 0x7f070002
 			public static int TextAppearance_Compat_Notification_Time_Media = 2131165186;
 			
-			// aapt resource value: 0x7f070008
-			public static int TextAppearance_Compat_Notification_Title = 2131165192;
+			// aapt resource value: 0x7f070009
+			public static int TextAppearance_Compat_Notification_Title = 2131165193;
 			
 			// aapt resource value: 0x7f070003
 			public static int TextAppearance_Compat_Notification_Title_Media = 2131165187;
 			
-			// aapt resource value: 0x7f070009
-			public static int Widget_Compat_NotificationActionContainer = 2131165193;
-			
 			// aapt resource value: 0x7f07000a
-			public static int Widget_Compat_NotificationActionText = 2131165194;
+			public static int Widget_Compat_NotificationActionContainer = 2131165194;
+			
+			// aapt resource value: 0x7f07000b
+			public static int Widget_Compat_NotificationActionText = 2131165195;
+			
+			// aapt resource value: 0x7f070005
+			public static int Widget_Support_CoordinatorLayout = 2131165189;
 			
 			static Style()
 			{
@@ -688,13 +766,53 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 		public partial class Styleable
 		{
 			
-			public static int[] FontFamily = new int[] {
-					2130771974,
+			public static int[] CoordinatorLayout = new int[] {
 					2130771975,
-					2130771976,
+					2130771976};
+			
+			// aapt resource value: 0
+			public static int CoordinatorLayout_keylines = 0;
+			
+			// aapt resource value: 1
+			public static int CoordinatorLayout_statusBarBackground = 1;
+			
+			public static int[] CoordinatorLayout_Layout = new int[] {
+					16842931,
 					2130771977,
 					2130771978,
-					2130771979};
+					2130771979,
+					2130771980,
+					2130771981,
+					2130771982};
+			
+			// aapt resource value: 0
+			public static int CoordinatorLayout_Layout_android_layout_gravity = 0;
+			
+			// aapt resource value: 2
+			public static int CoordinatorLayout_Layout_layout_anchor = 2;
+			
+			// aapt resource value: 4
+			public static int CoordinatorLayout_Layout_layout_anchorGravity = 4;
+			
+			// aapt resource value: 1
+			public static int CoordinatorLayout_Layout_layout_behavior = 1;
+			
+			// aapt resource value: 6
+			public static int CoordinatorLayout_Layout_layout_dodgeInsetEdges = 6;
+			
+			// aapt resource value: 5
+			public static int CoordinatorLayout_Layout_layout_insetEdge = 5;
+			
+			// aapt resource value: 3
+			public static int CoordinatorLayout_Layout_layout_keyline = 3;
+			
+			public static int[] FontFamily = new int[] {
+					2130771983,
+					2130771984,
+					2130771985,
+					2130771986,
+					2130771987,
+					2130771988};
 			
 			// aapt resource value: 0
 			public static int FontFamily_fontProviderAuthority = 0;
@@ -718,9 +836,9 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 					16844082,
 					16844083,
 					16844095,
-					2130771980,
-					2130771981,
-					2130771982};
+					2130771989,
+					2130771990,
+					2130771991};
 			
 			// aapt resource value: 0
 			public static int FontFamilyFont_android_font = 0;

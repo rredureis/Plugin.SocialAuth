@@ -62,12 +62,14 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 			// Try and obtain an access token
 			var activity = Plugin.SocialAuth.Droid.SocialAuth.CurrentActivity;
 
-            var androidAccount = Android.Accounts.AccountManager.FromContext(activity)
+            /*var androidAccount = Android.Accounts.AccountManager.FromContext(activity)
 										?.GetAccounts()
 										?.FirstOrDefault(a => a.Name?.Equals(result?.SignInAccount?.Email, StringComparison.InvariantCultureIgnoreCase) ?? false);
 
             if (androidAccount == null)
-                androidAccount = acct.Account;
+                androidAccount = acct.Account;*/
+
+            var androidAccount = acct.Account;
 
             var tokenScopes = options.Scopes.Select(s => "oauth2:" + s);
 
@@ -78,11 +80,15 @@ namespace Plugin.SocialAuth.Google.Native.Droid
 				// We must run this on a non-ui thread or google will throw an error
 				accessToken = await Task.Run(() =>
 				{
-					try
-					{
-						return global::Android.Gms.Auth.GoogleAuthUtil.GetToken(activity, androidAccount, string.Join(" ", tokenScopes));
-					}
-					catch { }
+                    try
+                    {
+                        return global::Android.Gms.Auth.GoogleAuthUtil.GetToken(activity, androidAccount, string.Join(" ", tokenScopes));
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
 					return null;
 				});
 
