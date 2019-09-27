@@ -73,6 +73,8 @@
     <ProjectReference Include="..\Plugin.SocialAuth.iOS\Plugin.SocialAuth.iOS.csproj">
       <Project>{B4D3FC41-7EC6-480C-9EDE-1D2861255E94}</Project>
       <Name>Plugin.SocialAuth.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="..\Plugin.SocialAuth\Plugin.SocialAuth.csproj">
       <Project>{BF5E2890-4830-4F79-8D54-37AC47D9C549}</Project>
